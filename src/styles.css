@@ -1,0 +1,153 @@
+ /* Main container */
+ .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Press Start 2P', cursive;
+    background-image: url('https://i.pinimg.com/originals/26/7a/75/267a75f70c48b9f21ee4bcf8e14e6f6a.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensure full height */
+    color: #0a0a0a;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 3rem;
+    color: #0a0a0a;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+    font-family: 'Bangers', sans-serif;
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 300px;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: #f4f4f9;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+    background-color: #eef9e7;
+}
+
+/* Grid Layout for Character Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* Character Card */
+.card {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.5), rgba(255, 255, 255, 0.7));
+    border: 2px solid #28a745;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: auto;
+    filter: grayscale(50%) sepia(30%);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    color: #333;
+    font-family: 'Bangers', sans-serif;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Status Badge */
+.status-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.status-badge.alive {
+    background-color: #28a745; /* Green */
+}
+
+.status-badge.dead {
+    background-color: #dc3545; /* Red */
+}
+
+.status-badge.unknown {
+    background-color: #6c757d; /* Gray */
+}
+
+/* Body Background Animation */
+body {
+    background: linear-gradient(270deg, #406339, #ada6a6);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
